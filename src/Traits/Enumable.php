@@ -1,6 +1,6 @@
 <?php
 
-namespace DilovanMatini\LaravelEnumable\Traits;
+namespace DilovanMatini\Enumable\Traits;
 
 use Illuminate\Support\Str;
 
