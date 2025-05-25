@@ -87,3 +87,10 @@ it('can generate cases from a method', function () {
     expect($cases[0]->name)->toBe('Case1');
     expect($cases[1]->name)->toBe('Case3');
 });
+
+it('can get the array for html select tag', function () {
+    $select = SampleEnum::toSelectArray();
+    expect($select)->toBeArray();
+    expect($select)->toHaveCount(3);
+    expect($select['case3'])->toBe('Case Three');
+});
