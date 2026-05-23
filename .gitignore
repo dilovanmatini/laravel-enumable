@@ -1,3 +1,6 @@
+# Local maintainer notes (not for the repo)
+BETA_RELEASE.md
+
 .idea
 .phpunit.cache
 build

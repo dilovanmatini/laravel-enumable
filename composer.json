@@ -4,7 +4,9 @@
     "keywords": [
         "dilovanmatini",
         "laravel",
-        "enumable"
+        "enum",
+        "enumable",
+        "php-enum"
     ],
     "homepage": "https://github.com/dilovanmatini/laravel-enumable",
     "license": "MIT",
@@ -17,14 +19,16 @@
     ],
     "require": {
         "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.16.1"
+        "illuminate/collections": "^10.0|^11.0|^12.0",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/validation": "^10.0|^11.0|^12.0"
     },
     "require-dev": {
+        "larastan/larastan": "^2.7|^3.0",
         "mockery/mockery": "^1.6.7",
-        "larastan/larastan": "^2.7",
-        "orchestra/testbench": "^7.0|^8.17|^9.0",
-        "pestphp/pest": "^2.28",
-        "spatie/pest-plugin-snapshots": "^2.1"
+        "orchestra/testbench": "^8.17|^9.0|^10.0",
+        "pestphp/pest": "^2.28|^3.0",
+        "phpstan/extension-installer": "^1.4"
     },
     "autoload": {
         "psr-4": {
@@ -33,7 +37,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "DilovanMatini\\Enumable\\Tests\\": "tests"
+            "DilovanMatini\\Enumable\\Tests\\": "tests/"
         }
     },
     "config": {
@@ -43,18 +47,13 @@
         },
         "sort-packages": true
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "DilovanMatini\\Enumable\\EnumableServiceProvider"
-            ]
-        }
-    },
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",
-        "baseline": "vendor/bin/phpstan analyse --generate-baseline",
-        "test": "vendor/bin/pest"
+        "test": "vendor/bin/pest",
+        "test:ci": [
+            "@analyse",
+            "@test"
+        ]
     },
-    "minimum-stability": "dev",
     "prefer-stable": true
 }

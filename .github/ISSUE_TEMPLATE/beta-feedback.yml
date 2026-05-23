@@ -1,0 +1,70 @@
+name: 1.1.0-beta feedback
+description: Report issues found while testing laravel-enumable 1.1.0-beta
+title: "[1.1.0-beta] "
+labels:
+  - 1.1.0-beta
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing the beta. Please install with:
+
+        `composer require dilovanmatini/laravel-enumable:1.1.0-beta.1`
+
+        See [UPGRADE.md](../blob/main/UPGRADE.md) for upgrade notes.
+
+  - type: input
+    id: package-version
+    attributes:
+      label: Package version
+      placeholder: "1.1.0-beta.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: php-version
+    attributes:
+      label: PHP version
+      options:
+        - "8.1"
+        - "8.2"
+        - "8.3"
+        - "8.4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: laravel-version
+    attributes:
+      label: Laravel version
+      options:
+        - "10.x"
+        - "11.x"
+        - "12.x"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: How to reproduce
+      description: Enum definition and code sample (minimal).
+      render: php
+    validations:
+      required: true
+
+  - type: textarea
+    id: regression
+    attributes:
+      label: Does this work on 1.0.2?
+      description: If you tested the same code on v1.0.2, note the result.
+    validations:
+      required: false
