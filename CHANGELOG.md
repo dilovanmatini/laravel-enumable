@@ -29,7 +29,7 @@ Stable release after beta feedback. See [1.1.0-beta.1](#110-beta1---2026-05-23) 
 - `only()` accepts enum instances, names, and values consistently with `except()`
 - Subset generation uses isolated classes per call (fixes shared-state bug) while keeping 1.0.x static API compatibility
 - Package is now zero-config (no service provider required)
-- Added explicit `illuminate/*` dependencies
+- Added explicit `illuminate/*` dependencies (Laravel 10–13)
 
 ### Removed
 

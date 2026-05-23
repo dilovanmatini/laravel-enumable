@@ -30,8 +30,8 @@ No service provider or configuration is required.
 
 ## Requirements
 
-- PHP 8.1 or higher
-- Laravel 10, 11, or 12
+- PHP 8.1 or higher (Laravel 13 applications require PHP 8.3+)
+- Laravel 10, 11, 12, or 13
 
 ## Usage
 

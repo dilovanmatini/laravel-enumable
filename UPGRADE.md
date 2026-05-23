@@ -62,6 +62,6 @@ These are additive; existing code does not need to use them:
 
 ### Requirements
 
-- PHP 8.1+
-- Laravel 10, 11, or 12
+- PHP 8.1+ (Laravel 13 requires PHP 8.3+)
+- Laravel 10, 11, 12, or 13
 - `illuminate/support`, `illuminate/collections`, and `illuminate/validation` are now explicit dependencies (pulled in automatically via Composer)
