@@ -4,7 +4,6 @@ BETA_RELEASE.md
 .idea
 .phpunit.cache
 build
-composer.lock
 coverage
 docs
 phpunit.xml

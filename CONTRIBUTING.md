@@ -4,6 +4,8 @@ Thank you for considering a contribution to [laravel-enumable](https://github.co
 
 ## Development setup
 
+Requires **PHP 8.2+** (the package itself supports PHP 8.1+ at runtime).
+
 ```bash
 composer install
 ```
