@@ -166,6 +166,29 @@ Methods that rely on a backed `value` (`values()`, `labels()`, `only()`, etc.) r
 | `toSelectArray()` | `toSelectArray()` or `labels()` |
 | `coerce()` | `tryFromValue()` or `getCase()` |
 
+## Comparison with Other Enum Packages
+
+| Feature / Package                                    | Laravel Enumable (this package)                        | BenSampo\\Enum                                     | Native PHP Enums                   |
+|------------------------------------------------------|--------------------------------------------------------|----------------------------------------------------|------------------------------------|
+| **Laravel Version Support**                          | 9.x, 10.x, 11.x, 12.x, 13.x (with `illuminate/*` deps) | 8.x, 9.x, 10.x, 11.x                               | Laravel 9+ (for PHP 8.1+ enums)    |
+| **Enum Backing**                                     | Native PHP 8.1+ enums                                  | Class-based emulation pre-8.1, native post-8.1     | Native                              |
+| **Get All Cases/Values/Names**                       | ✔️ cases(), names(), values()                          | ✔️ getValues(), getNames(), getInstances()          | ✔️ cases()                         |
+| **Labeling/Custom Labels**                           | ✔️ labels(), setLabels(), labelsMap() (+translate)     | ✔️ description, custom labels via method            | Manual implementation               |
+| **Array/Map Conversion**                             | ✔️ toArray(), toSelectArray(), toSelectArrayByName()   | ✔️ asArray(), asSelectArray()                       | Manual (array_map/cases)            |
+| **Validation Rules**                                 | ✔️ rule(), ruleOnly(), ruleExcept(), integrate w/Validator | ✔️ validationRule()                            | Manual                             |
+| **Lookup Helpers**                                   | ✔️ tryFromValue(), fromName(), fromNameOrDefault()     | ✔️ coerce(), fromKey(), fromValue(), etc.           | Native tryFrom()/from() (limited)   |
+| **Comparison & In Checks**                           | ✔️ is(), isAny(), in()                                 | ✔️ isOneOf()                                       | Manual or custom                    |
+| **String Helpers**                                   | ✔️ str(), slug(), snake(), camel(), etc. via EnumStringable | ❌                                            | ❌                                  |
+| **Translation Support**                              | ✔️ trans(), translation key helpers                    | ❌                                                | Manual                              |
+| **Subset/Filtering**                                 | ✔️ only(), except(), generate()                        | ✔️ filter()                                        | Manual                              |
+| **Macroable/Extendability**                          | ❌ (not macroable, but adds helpers)                   | ✔️ Macroable (extend enum classes)                  | Manual                              |
+| **Test/Type Coverage**                               | ✔️ (PHPStan level 8, extensive tests)                  | Good                                              | N/A                                 |
+| **Zero Config (out-of-the-box)**                     | ✔️                                                    | ❌ (service provider if using Laravel integration)   | ✔️ (once enum is defined)           |
+| **Extra Features**                                   | EnumStringable (String inflection), advanced labels    | Enum annotations, custom casting, traits           | N/A                                 |
+
+**Legend**: ✔️ = Supported; ❌ = Not Supported; Manual = Can be achieved but requires additional code.  
+_Last reviewed: Laravel Enumable v1.1.0, BenSampo\\Enum v5.x, PHP 8.1+ enums._
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for release notes.
