@@ -12,21 +12,13 @@ The `Enumable` trait enhances **backed** PHP enums (`string` or `int`) with util
 
 ## Installation
 
-**Stable (recommended for production):**
-
 ```bash
 composer require dilovanmatini/laravel-enumable
 ```
 
-**Beta (1.1.0 — help us test):**
-
-```bash
-composer require dilovanmatini/laravel-enumable:1.1.0-beta.1
-```
-
-See [UPGRADE.md](UPGRADE.md) for beta and upgrade notes. Stable `1.0.2` remains the default on Packagist until `1.1.0` is released.
-
 No service provider or configuration is required.
+
+Upgrading from 1.0.x? See [UPGRADE.md](UPGRADE.md).
 
 ## Requirements
 

@@ -207,16 +207,6 @@ trait Enumable
     }
 
     /**
-     * @deprecated Use labelsMap() instead. Will be removed in v2.0.
-     *
-     * @return array<int|string, string>|null
-     */
-    public static function setLabels(): ?array
-    {
-        return static::labelsMap();
-    }
-
-    /**
      * Override to provide custom labels keyed by backed value.
      *
      * @return array<int|string, string>|null
@@ -224,6 +214,16 @@ trait Enumable
     public static function labelsMap(): ?array
     {
         return null;
+    }
+
+    /**
+     * @deprecated Use labelsMap() instead. setLabels() will be removed in v2.0.
+     *
+     * @return array<int|string, string>|null
+     */
+    public static function setLabels(): ?array
+    {
+        return static::labelsMap();
     }
 
     /**

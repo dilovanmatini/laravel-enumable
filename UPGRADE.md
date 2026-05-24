@@ -1,18 +1,12 @@
 # Upgrade guide
 
-## Testing 1.1.0-beta
+## Upgrading from 1.0.x to 1.1.0
 
-Install the beta explicitly (stable `1.0.2` remains the default on Packagist):
+### Install
 
 ```bash
-composer require dilovanmatini/laravel-enumable:1.1.0-beta.1
+composer require dilovanmatini/laravel-enumable:^1.1
 ```
-
-Report issues on GitHub with the **1.1.0-beta** label. Include your PHP version, Laravel version, and a minimal code sample.
-
----
-
-## Upgrading from 1.0.x to 1.1.x
 
 ### No method renames
 
@@ -64,4 +58,14 @@ These are additive; existing code does not need to use them:
 
 - PHP 8.1+ (Laravel 13 requires PHP 8.3+)
 - Laravel 10, 11, 12, or 13
-- `illuminate/support`, `illuminate/collections`, and `illuminate/validation` are now explicit dependencies (pulled in automatically via Composer)
+- `illuminate/support`, `illuminate/collections`, and `illuminate/validation` are explicit dependencies (installed automatically via Composer)
+
+## Upgrading from 1.1.0-beta
+
+Replace the beta constraint with the stable release:
+
+```bash
+composer require dilovanmatini/laravel-enumable:^1.1
+```
+
+If you tested on Laravel 13, use **1.1.0** or newer (beta tags did not include Laravel 13 support).
