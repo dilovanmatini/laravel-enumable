@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/dilovanmatini/laravel-enumable.svg?style=flat-square)](https://packagist.org/packages/dilovanmatini/laravel-enumable)
 [![Total Downloads](https://img.shields.io/packagist/dt/dilovanmatini/laravel-enumable.svg?style=flat-square)](https://packagist.org/packages/dilovanmatini/laravel-enumable)
 [![License](https://img.shields.io/packagist/l/dilovanmatini/laravel-enumable.svg?style=flat-square)](https://packagist.org/packages/dilovanmatini/laravel-enumable)
-[![PHP 8.1+](https://img.shields.io/badge/PHP-8.3%2B-blue.svg)](https://php.net)
+[![PHP 8.1+](https://img.shields.io/badge/PHP-8.1%2B-blue.svg)](https://php.net)
 [![Laravel 10|11|12|13](https://img.shields.io/badge/Laravel-10%20%7C%2011%20%7C%2012%20%7C%2013-red.svg)](https://laravel.com)
 
 Native PHP enums with Laravel-friendly helpers for labels, selects, validation, and case filtering.
